@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<!-- Declares the document type and version of HTML (HTML5 in this case) -->
 <html lang="en">
-<!-- The root element of the HTML document, with language set to English -->
-
 <head>
-    <!-- The head section contains meta-information about the document -->
     <meta charset="UTF-8">
-    <!-- Specifies the character encoding for the document (UTF-8) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Ensures the page is responsive by setting the viewport width to the device's width -->
     <title>KNCT-HUB | Competitive Marketplace</title>
-    <!-- The title of the webpage, displayed in the browser tab -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Links to an external stylesheet for Font Awesome icons -->
     <style>
-        /* Internal CSS styles for the webpage */
-
-        /* Universal selector to reset margin, padding, and box-sizing for all elements */
         * {
             margin: 0;
             padding: 0;
@@ -24,133 +13,160 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* Styles for the body element */
         body {
-            background-color: #000; /* Black background */
-            color: #fff; /* White text color */
+            background-color: #000;
+            color: #fff;
         }
 
-        /* Header section styles */
         .header {
-            padding: 1rem 5%; /* Padding for the header */
-            background-color: #000; /* Black background */
-            border-bottom: 1px solid #fff; /* White border at the bottom */
+            padding: 1rem 5%;
+            background-color: #000;
+            border-bottom: 1px solid #1e90ff; /* Blue border for trust and professionalism */
         }
 
-        /* Navigation bar styles */
         .nav {
-            display: flex; /* Flexbox layout for navigation */
-            justify-content: space-between; /* Space between logo and nav links */
-            align-items: center; /* Vertically center items */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Logo styles */
         .logo {
-            font-size: 2rem; /* Large font size */
-            font-weight: bold; /* Bold text */
-            text-transform: uppercase; /* Uppercase text */
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff; /* White logo for contrast */
         }
 
-        /* Navigation links styles */
         .nav-links a {
-            color: #fff; /* White text color */
-            text-decoration: none; /* Remove underline from links */
-            margin-left: 2rem; /* Space between links */
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s; /* Smooth transition for hover effect */
         }
 
-        /* Hero section styles */
+        .nav-links a:hover {
+            color: #1e90ff; /* Blue hover effect for calmness and professionalism */
+        }
+
         .hero {
-            padding: 4rem 5%; /* Padding for the hero section */
-            text-align: center; /* Center-align text */
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('placeholder-bg.jpg'); /* Gradient overlay with background image */
-            background-size: cover; /* Ensure the background image covers the section */
+            padding: 4rem 5%;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('placeholder-bg.jpg');
+            background-size: cover;
         }
 
-        /* Hero heading styles */
         .hero h1 {
-            font-size: 3rem; /* Large font size */
-            margin-bottom: 1rem; /* Space below the heading */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1e90ff; /* Blue heading for trust and innovation */
         }
 
-        /* Call-to-action button styles */
+        .hero p {
+            color: #ccc; /* Light grey for smaller text */
+        }
+
         .cta-button {
-            background-color: #fff; /* White background */
-            color: #000; /* Black text color */
-            padding: 1rem 2rem; /* Padding inside the button */
-            border: none; /* No border */
-            cursor: pointer; /* Pointer cursor on hover */
-            margin-top: 2rem; /* Space above the button */
-            font-weight: bold; /* Bold text */
+            background-color: #1e90ff; /* Blue button for reliability and professionalism */
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+            font-weight: bold;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
         }
 
-        /* Categories section styles */
+        .cta-button:hover {
+            background-color: #00bfff; /* Lighter blue hover for calmness and serenity */
+        }
+
         .categories {
-            padding: 4rem 5%; /* Padding for the categories section */
-            display: grid; /* Grid layout for category cards */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
-            gap: 2rem; /* Space between grid items */
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
 
-        /* Category card styles */
         .category-card {
-            border: 1px solid #fff; /* White border */
-            padding: 2rem; /* Padding inside the card */
-            text-align: center; /* Center-align text */
-            transition: transform 0.3s; /* Smooth transform animation on hover */
+            border: 1px solid #1e90ff; /* Blue border for professionalism */
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s; /* Smooth transitions */
         }
 
-        /* Hover effect for category cards */
         .category-card:hover {
-            transform: translateY(-5px); /* Move card up slightly on hover */
+            transform: translateY(-5px);
+            border-color: #00bfff; /* Lighter blue border on hover for calmness */
         }
 
-        /* Features section styles */
+        .category-card h3 {
+            color: #fff; /* White for headings */
+        }
+
+        .category-card p {
+            color: #ccc; /* Light grey for smaller text */
+        }
+
         .features {
-            padding: 4rem 5%; /* Padding for the features section */
-            display: grid; /* Grid layout for feature cards */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
-            gap: 2rem; /* Space between grid items */
-            background-color: #111; /* Dark background */
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            background-color: #111;
         }
 
-        /* Feature card styles */
         .feature-card {
-            text-align: center; /* Center-align text */
-            padding: 2rem; /* Padding inside the card */
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #1e90ff; /* Blue border for trust and professionalism */
+            transition: border-color 0.3s; /* Smooth transition for hover effect */
         }
 
-        /* Footer styles */
+        .feature-card:hover {
+            border-color: #00bfff; /* Lighter blue border on hover for calmness */
+        }
+
+        .feature-card h3 {
+            color: #fff; /* White for headings */
+        }
+
+        .feature-card p {
+            color: #ccc; /* Light grey for smaller text */
+        }
+
         footer {
-            padding: 2rem 5%; /* Padding for the footer */
-            text-align: center; /* Center-align text */
-            border-top: 1px solid #fff; /* White border at the top */
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid #1e90ff; /* Blue border for professionalism */
         }
 
-        /* Social icons styles */
+        footer p {
+            color: #ccc; /* Light grey for smaller text */
+        }
+
         .social-icons a {
-            color: #fff; /* White icon color */
-            margin: 0 1rem; /* Space between icons */
-            font-size: 1.5rem; /* Icon size */
+            color: #1e90ff; /* Blue icons for innovation */
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s; /* Smooth transition for hover effect */
         }
 
-        /* Media query for responsive design on screens smaller than 768px */
+        .social-icons a:hover {
+            color: #00bfff; /* Lighter blue hover for calmness */
+        }
+
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Hide navigation links on smaller screens */
+                display: none;
             }
         }
     </style>
 </head>
-
 <body>
-    <!-- The body section contains the content of the webpage -->
-
-    <!-- Header section -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">KNCT-HUB</div> <!-- Logo -->
+            <div class="logo">KNCT-HUB</div> <!-- White logo -->
             <div class="nav-links">
-                <!-- Navigation links -->
                 <a href="#categories">Categories</a>
                 <a href="#features">Features</a>
                 <a href="#about">About</a>
@@ -159,69 +175,66 @@
         </nav>
     </header>
 
-    <!-- Hero section -->
     <section class="hero">
-        <h1>Empowering Buyers with Competitive Prices</h1> <!-- Main heading -->
-        <p>Discover unlimited categories. Connect with peers. Shop smarter.</p> <!-- Subheading -->
-        <button class="cta-button">Start Shopping</button> <!-- Call-to-action button -->
+        <h1>Empowering Buyers with Competitive Prices</h1>
+        <p>Discover unlimited categories. Connect with peers. Shop smarter.</p> <!-- Light grey text -->
+        <button class="cta-button">Start Shopping</button>
     </section>
 
-    <!-- Categories section -->
     <section id="categories" class="categories">
-        <!-- Category cards -->
         <div class="category-card">
-            <i class="fas fa-laptop fa-2x"></i> <!-- Icon -->
-            <h3>Electronics</h3> <!-- Category name -->
+            <i class="fas fa-laptop fa-2x"></i>
+            <h3>Electronics</h3>
+            <p>Explore the latest gadgets</p> <!-- Light grey text -->
         </div>
         <div class="category-card">
             <i class="fas fa-tshirt fa-2x"></i>
             <h3>Fashion</h3>
+            <p>Stay trendy with our collection</p> <!-- Light grey text -->
         </div>
         <div class="category-card">
             <i class="fas fa-tools fa-2x"></i>
             <h3>Tools</h3>
+            <p>Find the right tools for your projects</p> <!-- Light grey text -->
         </div>
         <div class="category-card">
             <i class="fas fa-futbol fa-2x"></i>
             <h3>Sports</h3>
+            <p>Gear up for your next game</p> <!-- Light grey text -->
         </div>
     </section>
 
-    <!-- Features section -->
     <section id="features" class="features">
-        <!-- Feature cards -->
         <div class="feature-card">
-            <i class="fas fa-tag fa-2x"></i> <!-- Icon -->
-            <h3>Competitive Pricing</h3> <!-- Feature title -->
-            <p>Always find the best deals in the market</p> <!-- Feature description -->
+            <i class="fas fa-tag fa-2x"></i>
+            <h3>Competitive Pricing</h3>
+            <p>Always find the best deals in the market</p> <!-- Light grey text -->
         </div>
         <div class="feature-card">
             <i class="fas fa-headset fa-2x"></i>
             <h3>24/7 Support</h3>
-            <p>Round-the-clock customer service</p>
+            <p>Round-the-clock customer service</p> <!-- Light grey text -->
         </div>
         <div class="feature-card">
             <i class="fas fa-share-alt fa-2x"></i>
             <h3>Social Sharing</h3>
-            <p>Share finds with your network</p>
+            <p>Share finds with your network</p> <!-- Light grey text -->
         </div>
         <div class="feature-card">
             <i class="fas fa-users fa-2x"></i>
             <h3>Community Driven</h3>
-            <p>Connect with like-minded shoppers</p>
+            <p>Connect with like-minded shoppers</p> <!-- Light grey text -->
         </div>
     </section>
 
-    <!-- Footer section -->
     <footer>
         <div class="social-icons">
-            <!-- Social media icons -->
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
-        <p>Addressing socioeconomic challenges through smart commerce</p> <!-- Footer text -->
-        <p>© 2023 KNCT-HUB. All rights reserved.</p> <!-- Copyright notice -->
+        <p>Addressing socioeconomic challenges through smart commerce</p> <!-- Light grey text -->
+        <p>© 2023 KNCT-HUB. All rights reserved.</p> <!-- Light grey text -->
     </footer>
 </body>
 </html>
