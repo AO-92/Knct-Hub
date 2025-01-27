@@ -1,46 +1,227 @@
 <!DOCTYPE html>
-<html>
+<!-- Declares the document type and version of HTML (HTML5 in this case) -->
+<html lang="en">
+<!-- The root element of the HTML document, with language set to English -->
+
 <head>
-    <title>KNCT - HUB</title>
+    <!-- The head section contains meta-information about the document -->
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive by setting the viewport width to the device's width -->
+    <title>KNCT-HUB | Competitive Marketplace</title>
+    <!-- The title of the webpage, displayed in the browser tab -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Links to an external stylesheet for Font Awesome icons -->
+    <style>
+        /* Internal CSS styles for the webpage */
+
+        /* Universal selector to reset margin, padding, and box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Styles for the body element */
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+        }
+
+        /* Header section styles */
+        .header {
+            padding: 1rem 5%; /* Padding for the header */
+            background-color: #000; /* Black background */
+            border-bottom: 1px solid #fff; /* White border at the bottom */
+        }
+
+        /* Navigation bar styles */
+        .nav {
+            display: flex; /* Flexbox layout for navigation */
+            justify-content: space-between; /* Space between logo and nav links */
+            align-items: center; /* Vertically center items */
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 2rem; /* Large font size */
+            font-weight: bold; /* Bold text */
+            text-transform: uppercase; /* Uppercase text */
+        }
+
+        /* Navigation links styles */
+        .nav-links a {
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 2rem; /* Space between links */
+        }
+
+        /* Hero section styles */
+        .hero {
+            padding: 4rem 5%; /* Padding for the hero section */
+            text-align: center; /* Center-align text */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('placeholder-bg.jpg'); /* Gradient overlay with background image */
+            background-size: cover; /* Ensure the background image covers the section */
+        }
+
+        /* Hero heading styles */
+        .hero h1 {
+            font-size: 3rem; /* Large font size */
+            margin-bottom: 1rem; /* Space below the heading */
+        }
+
+        /* Call-to-action button styles */
+        .cta-button {
+            background-color: #fff; /* White background */
+            color: #000; /* Black text color */
+            padding: 1rem 2rem; /* Padding inside the button */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin-top: 2rem; /* Space above the button */
+            font-weight: bold; /* Bold text */
+        }
+
+        /* Categories section styles */
+        .categories {
+            padding: 4rem 5%; /* Padding for the categories section */
+            display: grid; /* Grid layout for category cards */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+            gap: 2rem; /* Space between grid items */
+        }
+
+        /* Category card styles */
+        .category-card {
+            border: 1px solid #fff; /* White border */
+            padding: 2rem; /* Padding inside the card */
+            text-align: center; /* Center-align text */
+            transition: transform 0.3s; /* Smooth transform animation on hover */
+        }
+
+        /* Hover effect for category cards */
+        .category-card:hover {
+            transform: translateY(-5px); /* Move card up slightly on hover */
+        }
+
+        /* Features section styles */
+        .features {
+            padding: 4rem 5%; /* Padding for the features section */
+            display: grid; /* Grid layout for feature cards */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+            gap: 2rem; /* Space between grid items */
+            background-color: #111; /* Dark background */
+        }
+
+        /* Feature card styles */
+        .feature-card {
+            text-align: center; /* Center-align text */
+            padding: 2rem; /* Padding inside the card */
+        }
+
+        /* Footer styles */
+        footer {
+            padding: 2rem 5%; /* Padding for the footer */
+            text-align: center; /* Center-align text */
+            border-top: 1px solid #fff; /* White border at the top */
+        }
+
+        /* Social icons styles */
+        .social-icons a {
+            color: #fff; /* White icon color */
+            margin: 0 1rem; /* Space between icons */
+            font-size: 1.5rem; /* Icon size */
+        }
+
+        /* Media query for responsive design on screens smaller than 768px */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide navigation links on smaller screens */
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to K - Hub, empowering buyers for competitive prices!</h1>
-    <p>I am going to try to make the business using this domain... so far I have high hopes!
+    <!-- The body section contains the content of the webpage -->
 
-        <p>
-            Beginning with an MVP (Minimum Viable Product ) to learn as much as possible from a minimium investment and use what is learned as momentum to continue building.
-        </p>
-    </p>
-    <p>
-        <p><h2> S.W.O.T Analysis</h2></p>
-        <h3> Strenghts</h3>
-        <p>1. Exceptionally Competitive prices</p>
-<p>2. Ability to share desired items for purchase on social platforms</p>
-<p>3. 24/7 customer support</p>
-<p>4. Peer networking /Unite people with common purchasing behavior</p>
-<p>5. Address socioeconomic issues (Student debts, high home prices, unstable inflation)</p>
+    <!-- Header section -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">KNCT-HUB</div> <!-- Logo -->
+            <div class="nav-links">
+                <!-- Navigation links -->
+                <a href="#categories">Categories</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="https://knct-hub.shop/">Login</a>
+            </div>
+        </nav>
+    </header>
 
-<p><h2>Weaknesses</h2></p>
-<p>1. Limited brand awareness</p>
-<p>2. Dependence on technology (Cyber threats, technical issues, cost, skills gap)</p>
-<p>3. Reliance on manufacturers and suppliers</p>
-<p>4. Shipping</p>
-<p> High competition in the e-commerce industry</p>
+    <!-- Hero section -->
+    <section class="hero">
+        <h1>Empowering Buyers with Competitive Prices</h1> <!-- Main heading -->
+        <p>Discover unlimited categories. Connect with peers. Shop smarter.</p> <!-- Subheading -->
+        <button class="cta-button">Start Shopping</button> <!-- Call-to-action button -->
+    </section>
 
-<p><h2>Opportunities</h2></p>
-<p>1. Expenad into new market areas (B2B)</p>
-<p>2. Introduction of new product categories and industries</p>
-<p>3. Partnership with influencers for marketing</p>
-<p>4. Integration of AI for personalized </p>
-<p>5. Adoption of sustainable and ethical practices for competitive advantage</p>
-    </p>
+    <!-- Categories section -->
+    <section id="categories" class="categories">
+        <!-- Category cards -->
+        <div class="category-card">
+            <i class="fas fa-laptop fa-2x"></i> <!-- Icon -->
+            <h3>Electronics</h3> <!-- Category name -->
+        </div>
+        <div class="category-card">
+            <i class="fas fa-tshirt fa-2x"></i>
+            <h3>Fashion</h3>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-tools fa-2x"></i>
+            <h3>Tools</h3>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-futbol fa-2x"></i>
+            <h3>Sports</h3>
+        </div>
+    </section>
 
-<p><h2>Threats</h2></p>
-<p>1. Economic downturns impacting customer spending</p>
-<p>2. Changes in trade regulations affecting shipping</p>
-<p>3. Cybersecurity threats and data breaches/ Data privacy and compliance</p>
-<p>4. Competitor expansion and market saturation</p>
-<p>5. Poor feedback and reputation damage on social media</p>
-    </p>
+    <!-- Features section -->
+    <section id="features" class="features">
+        <!-- Feature cards -->
+        <div class="feature-card">
+            <i class="fas fa-tag fa-2x"></i> <!-- Icon -->
+            <h3>Competitive Pricing</h3> <!-- Feature title -->
+            <p>Always find the best deals in the market</p> <!-- Feature description -->
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-headset fa-2x"></i>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock customer service</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-share-alt fa-2x"></i>
+            <h3>Social Sharing</h3>
+            <p>Share finds with your network</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-users fa-2x"></i>
+            <h3>Community Driven</h3>
+            <p>Connect with like-minded shoppers</p>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="social-icons">
+            <!-- Social media icons -->
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>Addressing socioeconomic challenges through smart commerce</p> <!-- Footer text -->
+        <p>© 2023 KNCT-HUB. All rights reserved.</p> <!-- Copyright notice -->
+    </footer>
 </body>
 </html>
