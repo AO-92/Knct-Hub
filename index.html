@@ -119,8 +119,17 @@
             color: #1e90ff; /* Blue heading for trust and innovation */
         }
 
+        .feature-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
         .feature-item {
-            margin-bottom: 1.5rem;
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
         }
 
         .feature-item h3 {
@@ -155,6 +164,11 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+            }
+
+            .feature-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -203,25 +217,27 @@
 
     <section id="features" class="features">
         <h2>Why Choose KNCT-HUB?</h2>
-        <div class="feature-item">
-            <i class="fas fa-tag fa-2x"></i>
-            <h3>Competitive Pricing</h3>
-            <p>Always find the best deals in the market</p> <!-- Light grey text -->
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-headset fa-2x"></i>
-            <h3>24/7 Support</h3>
-            <p>Round-the-clock customer service</p> <!-- Light grey text -->
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-share-alt fa-2x"></i>
-            <h3>Social Sharing</h3>
-            <p>Share finds with your network</p> <!-- Light grey text -->
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-users fa-2x"></i>
-            <h3>Community Driven</h3>
-            <p>Connect with like-minded shoppers</p> <!-- Light grey text -->
+        <div class="feature-container">
+            <div class="feature-item">
+                <i class="fas fa-tag fa-2x"></i>
+                <h3>Competitive Pricing</h3>
+                <p>Always find the best deals in the market</p> <!-- Light grey text -->
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset fa-2x"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer service</p> <!-- Light grey text -->
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-share-alt fa-2x"></i>
+                <h3>Social Sharing</h3>
+                <p>Share finds with your network</p> <!-- Light grey text -->
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users fa-2x"></i>
+                <h3>Community Driven</h3>
+                <p>Connect with like-minded shoppers</p> <!-- Light grey text -->
+            </div>
         </div>
     </section>
 
